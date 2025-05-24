@@ -19,11 +19,15 @@ int main()
 	container.AddListener("loaded", &button);
 	container.AddListener("hover", &button);
 
-	std::cout << "Запуск событий..." << std::endl;
-	std::cout << "События загрузки:" << std::endl;
+	std::cout << "Запуск событий..." << std::endl << std::endl;
+	std::cout << "Событие загрузки:" << std::endl;
 	container.EmitEvent("loaded");
-	std::cout << "Запуск события клик" << std::endl;
+	std::cout << std::endl;
+
+	std::cout << "Событие нажатия:" << std::endl;
 	container.EmitEvent("click");
+	std::cout << std::endl;
+	
 	std::cout << "Событие наведения курсора" << std::endl;
 	container.EmitEvent("hover");
 
